@@ -16,3 +16,14 @@
 ## Known Issue
 ### the code will not work for international numbers if the country code is not 2 digits or the area code is not 2 digits
 ### the code will not work for local numbers if the country code is not 3 digits
+# histogram.py
+## Usage
+### We use file to open the text file and we use rstrip() to strip the text file in to a list of string
+## Description
+### add argumment-f which is used for define the column if its not defined the default value is 2
+### open population_analysis.tsv file
+### plot histogram with data from a specific column
+### Save the histogram as png
+### Display the plot
+## Known Issue
+### population_analysis.tsv is appear to be unrecognized arguments
