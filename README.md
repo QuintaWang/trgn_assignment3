@@ -18,7 +18,7 @@
 ### the code will not work for local numbers if the country code is not 3 digits
 # histogram.py
 ## Usage
-### We use argument to define the column and we open file to plot histogram with data from a column
+ We use argument to define the column and we open file to plot histogram with data from a column
 ## Description
 ### add argumment-f which is used for define the column if its not defined the default value is 2
 ### open population_analysis.tsv file
