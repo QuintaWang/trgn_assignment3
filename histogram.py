@@ -1,19 +1,13 @@
-import csv
+#!/usr/bin/python
+import pandas as pd
 import matplotlib.pyplot as plt
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-f', type=int, default=2)
-
-col = parser.parse_args()
-col.extra_args = col.extra_args[1:]
-with open("population_analysis.tsv") as tsvfile:
-    tsvreader = csv.reader(tsvfile, delimiter="\t")
-
-plt.hist(tsvreader[col])
-
-# Save the histogram
+parser.add_argument('file',type=str)
+parser.add_argument('-f', type=int, default=1)
+name=parser.parse_args().file
+col = parser.parse_args().f
+table=pd.read_csv(name, sep='\t', usecols=[col])
+plt.hist(table)
 plt.savefig('hist.png')
-
-# Display the plot
-plt.show()
